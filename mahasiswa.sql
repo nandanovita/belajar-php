@@ -56,7 +56,7 @@ update mahasiswa set nim = "20011011" where id = 2;
 
 -- delete data mahasiswa 
 delete from mahasiswa where id=2;
-5
+
 
 
 
