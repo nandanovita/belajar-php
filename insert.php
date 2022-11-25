@@ -7,7 +7,7 @@ if (isset($_POST["submit"])){
     $id_jurusan = $_POST['id_jurusan'];
     $gender = $_POST['gender'];
     $tpt_lahir = $_POST['tpt_lahir'];
-    $tgl_lahir = $_POST['tgl lahir'];
+    $tgl_lahir = $_POST['tgl_lahir'];
     $alamat = $_POST['alamat'];
 
     // 1. Buat koneksi dengan MySQL
@@ -29,7 +29,7 @@ $sql = "insert into mahasiswa (id_jurusan, nim, nama, jenis_kelamin, tempat_lahi
 if (mysqli_query($con,$sql)){
     echo "Data berhasil ditambah";
 }else{
-    echo "Ada Error". mysqli_error();
+    echo "Ada Error". mysqli_error($con);
 }
 }
 
@@ -44,7 +44,7 @@ if (mysqli_query($con,$sql)){
     <title>Tambah Data Mahasiswa</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="insert.php" method="post">
         NIM: <input type="text" name="nim"><br>
         Nama: <input type="text" name="nama"><br>
         ID Jurusan: <input type="number" name="id jurusan"><br>
